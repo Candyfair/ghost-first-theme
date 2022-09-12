@@ -208,11 +208,144 @@ body {
   font-size: 1.1rem;
 }
 
-/* ----------------------- TAGS PAGE ----------------------- */
-.tags {
-
+/* ----------------------- POST PAGE ----------------------- */
+.article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 60px;
 }
 
+/* Article header */
+.article-header {
+  width: 800px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: colum;
+  margin-bottom: 24px;
+}
+
+/* Article image */
+.article-image-wrapper {
+  margin-bottom: 60px;
+}
+
+.article-featured-image {
+  border-radius: 30px;
+  width: 100vw;
+  max-height: 550px;
+  object-fit: cover;
+}
+
+.figure-caption {
+  font-size: 0.9rem;
+  color: #777777;
+  text-align: right;
+}
+
+.figure-caption a {
+  color: #777777;
+  text-decoration: none;
+}
+
+.figure-caption a:hover {
+  text-decoration: underline;
+}
+
+/* Article header content */
+.article-tag {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #C10080;
+}
+
+.article-title {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 1.3;
+  margin-bottom: 24px;
+}
+
+.article-excerpt {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #777777;
+  margin-bottom: 24px;
+}
+
+.article-meta {
+  font-weight: 400;
+  font-size: 1.2;
+  color: #777777;
+}
+
+/* Article content */
+.article-content {
+  width: 800px;
+}
+
+.article-content p {
+  font-size: 1.5rem;
+  text-align: justify;
+  margin-top: 12px;
+}
+
+.article-content h2 {
+  font-weight: 700;
+  font-size: 1.9rem;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.article-content h3 {
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.article-content a {
+  font-weight: 700;
+  color: #C10080;
+  text-decoration: none;
+}
+
+.article-content a:hover {
+  text-decoration: underline;
+}
+
+.article-content blockquote {
+  margin: 50px 0 0 0;
+  border-left: 4px solid #C10080;
+  padding-left: 2rem;
+  font-style: italic;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.article-content hr {
+  border: none;
+  border-top: 1px solid #EDEDF1;
+  margin: 36px 0;
+}
+
+/* Similar articles */
+.similar-articles {
+  font-weight: 700;
+  font-size: 1.9rem;
+  background-color: #001C46;
+  color: #fff;
+  border-radius: 50px;
+  padding: 18px 25px;
+  display: inline-block;
+}
+
+
+/* ----------------------- TAGS (CATEGORIES) PAGE ----------------------- */
 .tag-title {
   font-weight: 700;
   font-size: 3rem;
