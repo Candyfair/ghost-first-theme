@@ -1,0 +1,17 @@
+{{!< default}}
+
+<div class="tags">
+
+  <h1 class="tag-title">{{tag.name}}</h1>
+
+  <div class="post-feed">
+      {{#foreach posts}}
+          {{> "post-card"}}
+      {{/foreach}}
+  </div>
+
+  <div class="pagination-container">
+    {{pagination}}
+  </div>
+
+</div>

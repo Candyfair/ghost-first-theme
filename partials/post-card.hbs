@@ -1,0 +1,100 @@
+<article class="post-card {{post_class}}{{#is "home"}}{{#has index="0"}} post-card-large{{/has}}{{^has index="0"}} post-card-medium{{/has}}{{/is}}{{^is "home"}} post-card-medium{{/is}}">
+
+  {{!-- Image --}}
+  {{#if feature_image}}
+    <a class="post-card-image-link" href="{{url}}">
+      {{#is "home"}}
+      {{#has index="0"}}
+        <img class="post-card-image post-card-image-large"
+          srcset="{{img_url feature_image size="s"}} 300w,
+                  {{img_url feature_image size="m"}} 600w,
+                  {{img_url feature_image size="l"}} 1000w,
+                  {{img_url feature_image size="xl"}} 2000w"
+          sizes="(max-width: 1000px) 400px, 800px"
+          src="{{img_url feature_image size="m"}}"
+          alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+          loading="lazy"
+        />
+      {{else}}
+        <div class="post-card-image-container">
+          <img class="post-card-image post-card-image-medium"
+              srcset="{{img_url feature_image size="s"}} 300w,
+                      {{img_url feature_image size="m"}} 600w,
+                      {{img_url feature_image size="l"}} 1000w,
+                      {{img_url feature_image size="xl"}} 2000w"
+              sizes="(max-width: 1000px) 400px, 800px"
+              src="{{img_url feature_image size="m"}}"
+              alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+              loading="lazy"
+          />
+        </div>
+      {{/has}}
+      {{/is}}
+
+      {{^is "home"}}
+                <div class="post-card-image-container">
+          <img class="post-card-image post-card-image-medium"
+              srcset="{{img_url feature_image size="s"}} 300w,
+                      {{img_url feature_image size="m"}} 600w,
+                      {{img_url feature_image size="l"}} 1000w,
+                      {{img_url feature_image size="xl"}} 2000w"
+              sizes="(max-width: 1000px) 400px, 800px"
+              src="{{img_url feature_image size="m"}}"
+              alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+              loading="lazy"
+          />
+        </div>
+      {{/is}}
+      
+    </a>
+  {{/if}}
+
+  {{!-- Contenu --}}
+  <div class="post-card-content{{#is "home"}}{{#has index="0"}}-large{{/has}}{{/is}}">
+    <div>
+      <header class="post-card-header">
+          <div class="post-card-tags">
+              {{#primary_tag}}
+                <a href="{{url}}" class="post-card-primary-tag{{#is "home"}}{{#has index="0"}} post-card-primary-tag-large{{/has}}{{/is}}">
+                  {{name}}
+                </a>
+              {{/primary_tag}}
+              {{#if featured}}
+                  <span class="post-card-featured">{{> "icons/fire"}} Featured</span>
+              {{/if}}
+          </div>
+          <a class="post-card-content-link" href="{{url}}">
+            <h2 class="post-card-title{{#is "home"}}{{#has index="0"}}-large{{/has}}{{/is}}">
+                {{#unless access}}
+                {{^has visibility="public"}}
+                    {{#unless feature_image}}
+                        {{> "icons/lock"}}
+                    {{/unless}}
+                {{/has}}
+                {{/unless}}
+                {{title}}
+            </h2>
+          </a>
+      </header>
+      {{#is "home"}}
+        {{#has index="0"}}
+          {{#if excerpt}}
+              <div class="post-card-excerpt">{{excerpt}}</div>
+          {{/if}}
+        {{/has}}
+      {{/is}}
+    </div> 
+
+    <footer class="post-card-meta{{#is "home"}}{{#has index="0"}} post-card-meta-large{{/has}}{{/is}}">
+        <time class="post-card-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+        {{#if reading_time}}
+            <span class="post-card-meta-length">· {{reading_time}}</span>
+        {{/if}}
+        {{#if @site.comments_enabled}}
+            {{comment_count}}
+        {{/if}}
+    </footer>
+
+  </div>
+
+</article>

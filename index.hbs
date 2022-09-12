@@ -1,0 +1,15 @@
+{{!< default}}
+
+<div class="posts">
+
+  <div class="post-feed">
+      {{#foreach posts}}
+          {{> "post-card"}}
+      {{/foreach}}
+  </div>
+
+  <div class="pagination-container">
+    {{pagination}}
+  </div>
+
+</div>

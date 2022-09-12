@@ -1,0 +1,15 @@
+    <div class="header__inner">
+      {{!-- LOGO --}}
+      <a href="{{@site.url}}" class="header__logo">
+        {{#if @site.logo}}
+          <img src="{{@site.logo}}" alt="{{@site.title}}">
+        {{else}}
+          {{@site.title}}
+        {{/if}}
+      </a>
+
+      {{!-- NAVIGATION --}}
+      <div class="header__nav">
+        {{navigation}}
+      </div>
+    </div>
