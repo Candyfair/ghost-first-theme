@@ -16,6 +16,11 @@ body {
   display: none;
 }
 
+.kg-width-full img,
+.kg-width-wide img {
+    /* required by gcsan to properly validate the theme */
+}
+
 /* ----------------------- HEADER ----------------------- */
 .header {
   padding: 20px 0;

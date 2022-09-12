@@ -59,19 +59,9 @@
                   {{name}}
                 </a>
               {{/primary_tag}}
-              {{#if featured}}
-                  <span class="post-card-featured">{{> "icons/fire"}} Featured</span>
-              {{/if}}
           </div>
           <a class="post-card-content-link" href="{{url}}">
             <h2 class="post-card-title{{#is "home"}}{{#has index="0"}}-large{{/has}}{{/is}}">
-                {{#unless access}}
-                {{^has visibility="public"}}
-                    {{#unless feature_image}}
-                        {{> "icons/lock"}}
-                    {{/unless}}
-                {{/has}}
-                {{/unless}}
                 {{title}}
             </h2>
           </a>
