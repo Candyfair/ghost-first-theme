@@ -1,0 +1,20 @@
+{{!< default}}
+
+<div class="tags">
+
+  <h1 class="tag-title">{{tag.name}}</h1>
+
+  {{#get 'posts' include="tags" filter="primary_tag:{{tag.slug}}"}}
+    <div class="post-feed">
+        {{#foreach posts}}
+            {{> "post-card"}}
+        {{/foreach}}
+    </div>
+  {{/get}}
+
+  <div class="pagination-container">
+    {{pagination}}
+  </div>
+
+
+</div>

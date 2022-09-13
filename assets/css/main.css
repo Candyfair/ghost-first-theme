@@ -208,6 +208,112 @@ body {
   font-size: 1.1rem;
 }
 
+/* ----------------------- COMIC TEMPLATE ----------------------- */
+
+.comic-content {
+    width: 1200px;
+}
+
+@media (max-width: 1200px) {
+  .comic-content {
+      width: 1000px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .comic-content {
+      width: 800px;
+  }
+}
+
+@media (max-width: 800px) {
+  .comic-content {
+      width: 700px;
+  }
+}
+
+@media (max-width: 600px) {
+  .comic-content {
+      width: 100%;
+  }
+}
+
+.comic-content p {
+  padding: 12px;
+  font-size: 1.5rem;
+  text-align: justify;
+}
+
+.comic-content h2 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+.comic-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  padding: 12px;
+}
+
+/* Navigation between posts */
+.navigation-between-posts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 30px;
+}
+
+.navigation-between-posts a {
+  text-decoration: none;
+  color: #C10080;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.navigation-between-posts a:hover {
+  text-decoration: underline;
+}
+
+.prev-post {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+
+.next-post {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+}
+
+.prev-post-wrapping {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.next-post-wrapping {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.navigation-between-posts-meta {
+  color: #777777;
+  font-style: italic;
+  font-size: 1rem;
+}
+
 /* ----------------------- POST PAGE ----------------------- */
 .article {
   display: flex;
@@ -368,10 +474,9 @@ body {
 }
 
 .pagination-wrapper {
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
 }
 
 .page-number {
