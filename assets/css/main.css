@@ -228,10 +228,6 @@ body {
 }
 
 /* Article image */
-.article-image-wrapper {
-  margin-bottom: 60px;
-}
-
 .article-featured-image {
   border-radius: 30px;
   width: 100vw;
@@ -333,8 +329,16 @@ body {
   margin: 36px 0;
 }
 
+.kg-image {
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
 /* Similar articles */
-.similar-articles {
+.similar-articles-title {
   font-weight: 700;
   font-size: 1.9rem;
   background-color: #001C46;

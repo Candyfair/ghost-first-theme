@@ -64,8 +64,8 @@
 
 {{!-- Similar articles --}}
 {{#get 'posts' include="tags" filter="primary_tag:{{post.primary_tag.slug}}+id:-{{post.id}}"}}
-	<div>
-    <h2 class="similar-articles">Other articles in this category</h2></a>
+	<div class="similar-articles">
+    <h2 class="similar-articles-title">More articles in this category</h2></a>
 
 	  <div class="post-feed">
       {{#foreach posts limit="3" order="published_at desc"}}
