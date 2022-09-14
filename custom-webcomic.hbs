@@ -1,0 +1,35 @@
+{{!< default}}
+
+{{#post}}
+<article class="article">
+
+  {{!-- Content --}}
+  <section class="webcomic-content">
+    {{content}}
+  </section>
+
+  {{!-- Article header --}}
+  <div class="comic-header comic-content">
+
+    {{!-- Article meta info --}}
+    <div class="webcomic-meta">
+      <div class="article-meta">
+        Published on <time datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+      </div>
+    </div>
+  </div>
+
+  {{#if comments}}
+      <section class="article-comments gh-canvas">
+          {{comments}}
+      </section>
+  {{/if}}
+
+</article>
+
+{{!-- Navigation --}}
+{{> "pagination-comics"}}
+
+{{/post}}
+
+
